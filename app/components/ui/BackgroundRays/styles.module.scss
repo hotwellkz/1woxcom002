@@ -1,8 +1,8 @@
 .rayContainer {
   // Theme-specific colors
-  --ray-color-primary: color-mix(in srgb, var(--primary-color), transparent 30%);
-  --ray-color-secondary: color-mix(in srgb, var(--secondary-color), transparent 30%);
-  --ray-color-accent: color-mix(in srgb, var(--accent-color), transparent 30%);
+  --ray-color-primary: color-mix(in srgb, #32CD32, transparent 30%); // Зеленый лайм
+  --ray-color-secondary: color-mix(in srgb, #3CB371, transparent 30%); // Средний морской зеленый
+  --ray-color-accent: color-mix(in srgb, #00FA9A, transparent 30%); // Зеленый весенний
 
   // Theme-specific gradients
   --ray-gradient-primary: radial-gradient(var(--ray-color-primary) 0%, transparent 70%);
@@ -15,7 +15,6 @@
   animation: fadeIn 1.5s ease-out;
   pointer-events: none;
   z-index: 0;
-  //   background-color: transparent;
 
   :global(html[data-theme='dark']) & {
     mix-blend-mode: screen;
