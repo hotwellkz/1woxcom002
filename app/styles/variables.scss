@@ -1,8 +1,15 @@
+:root {
+  --gradient-opacity: 0.8;
+  --primary-color: rgba(34, 197, 94, var(--gradient-opacity));
+  --secondary-color: rgba(22, 163, 74, var(--gradient-opacity));
+  --accent-color: rgba(21, 128, 61, var(--gradient-opacity));
+}
+
 /* Color Tokens Light Theme */
 :root,
 :root[data-theme='light'] {
   --bolt-elements-borderColor: theme('colors.alpha.gray.10');
-  --bolt-elements-borderColorActive: theme('colors.accent.600');
+  --bolt-elements-borderColorActive: theme('colors.accent.500');
 
   --bolt-elements-bg-depth-1: theme('colors.white');
   --bolt-elements-bg-depth-2: theme('colors.gray.50');
@@ -50,7 +57,7 @@
   --bolt-elements-actions-code-background: theme('colors.gray.800');
 
   --bolt-elements-messages-background: theme('colors.gray.100');
-  --bolt-elements-messages-linkColor: theme('colors.accent.500');
+  --bolt-elements-messages-linkColor: theme('colors.accent.600');
   --bolt-elements-messages-code-background: theme('colors.gray.800');
   --bolt-elements-messages-inlineCode-background: theme('colors.gray.200');
   --bolt-elements-messages-inlineCode-text: theme('colors.gray.800');
@@ -66,9 +73,9 @@
   --bolt-elements-prompt-background: theme('colors.alpha.white.80');
 
   --bolt-elements-sidebar-dropdownShadow: theme('colors.alpha.gray.10');
-  --bolt-elements-sidebar-buttonBackgroundDefault: theme('colors.alpha.accent.10');
-  --bolt-elements-sidebar-buttonBackgroundHover: theme('colors.alpha.accent.20');
-  --bolt-elements-sidebar-buttonText: theme('colors.accent.700');
+  --bolt-elements-sidebar-buttonBackgroundDefault: theme('colors.alpha.green.10');
+  --bolt-elements-sidebar-buttonBackgroundHover: theme('colors.alpha.green.20');
+  --bolt-elements-sidebar-buttonText: theme('colors.green.700');
 
   --bolt-elements-preview-addressBar-background: theme('colors.gray.100');
   --bolt-elements-preview-addressBar-backgroundHover: theme('colors.alpha.gray.5');
