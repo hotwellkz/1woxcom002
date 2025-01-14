@@ -3,7 +3,6 @@ import type { LinksFunction } from '@remix-run/cloudflare';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import tailwindReset from '@unocss/reset/tailwind-compat.css?url';
 import { themeStore } from './lib/stores/theme';
-import { logStore } from './lib/stores/logs';
 import { stripIndents } from './utils/stripIndent';
 import { createHead } from 'remix-island';
 import { useEffect } from 'react';
@@ -57,11 +56,23 @@ export const Head = createHead(() => (
   <>
     <meta charSet="utf-8" />
     <title>Create an AI Website | Build AI-Powered Websites with 1wox</title>
-    <meta name="description" content="Create an AI website easily with 1wox. Our AI-powered platform helps you build, customize and deploy websites in minutes. Start creating your AI website today!" />
-    <meta name="keywords" content="create AI website, AI website builder, AI web development, 1wox" />
+    <meta
+      name="description"
+      content="Create an AI website easily with 1wox. Our AI-powered platform helps you build, customize and deploy websites in minutes. Start creating your AI website today!"
+    />
+    <meta
+      name="keywords"
+      content="create AI website, AI website builder, AI web development, 1wox"
+    />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Create an AI Website | Build AI-Powered Websites with 1wox" />
-    <meta property="og:description" content="Create an AI website easily with 1wox. Our AI-powered platform helps you build, customize and deploy websites in minutes." />
+    <meta
+      property="og:title"
+      content="Create an AI Website | Build AI-Powered Websites with 1wox"
+    />
+    <meta
+      property="og:description"
+      content="Create an AI website easily with 1wox. Our AI-powered platform helps you build, customize and deploy websites in minutes."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://1wox.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -91,15 +102,6 @@ import { logStore } from './lib/stores/logs';
 
 export default function App() {
   const theme = useStore(themeStore);
-
-  useEffect(() => {
-    logStore.logSystem('Application initialized', {
-      theme,
-      platform: navigator.platform,
-      userAgent: navigator.userAgent,
-      timestamp: new Date().toISOString(),
-    });
-  }, []);
 
   useEffect(() => {
     logStore.logSystem('Application initialized', {
